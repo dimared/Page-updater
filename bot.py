@@ -1,3 +1,4 @@
+#*- coding: utf-8 -*-
 import json
 import requests
 import time
@@ -36,4 +37,4 @@ while True:
     if target != old_target and old_target != None:
         send_mess(CHAT_ID, TEXT)
 
-    time.sleep(6000)
+    time.sleep(data["period"])
