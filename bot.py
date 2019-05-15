@@ -29,10 +29,10 @@ while True:
 
     # positions
     pos_left = html.find(ANCHOR_LEFT)
-    pos_right = html[pos_left:].find(ANCHOR_RIGHT)
+    pos_right = pos_left + html[pos_left:].find(ANCHOR_RIGHT)
 
     old_target = target
-    target = html[pos_left:pos_left+pos_right]
+    target = html[pos_left:pos_right]
 
     if target != old_target and old_target != None:
         send_mess(CHAT_ID, TEXT)
